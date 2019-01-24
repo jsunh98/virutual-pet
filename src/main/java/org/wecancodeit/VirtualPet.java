@@ -4,36 +4,24 @@ import org.wecancodeit.VirtualPet;
 
 public class VirtualPet {
 
-	private String type; // these are instances -- these are the problems the pet faces (properties)
+	// these are instances -- these are the problems the pet faces (properties)
 	private String name;
-	private String dirty;
 	private int age;
 	private int hunger;
-	private String condition;
-	private boolean sleepiness;
+	private int sleepy; 
 
-	public VirtualPet(String type, String name, String clean, int age, int hunger, int petting, boolean boredom) { // constructor
-		this.type = type; // creating instance of a class. These are properties. Properties are states of
-							// classes.
+	public VirtualPet(String name, int age, int hunger, int sleepy) { // constructor
+		// creating instance of a class. These are properties. Properties are states of
+		// classes.
 		this.name = name;
-		this.dirty = dirty;
 		this.age = age;
 		this.hunger = hunger;
-		this.condition = condition;
-		this.sleepiness = sleepiness;
+		this.sleepy = sleepy; 
 
-	}
-
-	public String getType() { // These are the getters. Getters allow us to access values of private methods.
-		return type;
 	}
 
 	public String getName() {
 		return name;
-	}
-
-	public String getDirty() {
-		return dirty;
 	}
 
 	public int getAge() {
@@ -43,14 +31,9 @@ public class VirtualPet {
 	public int getHunger() {
 		return hunger;
 	}
-
-	public String getCondition() {
-		return condition;
-	}
-
-	public boolean getSleepiness() {
-		return sleepiness;
-
+	
+	public int getSleepy() {
+		return sleepy; 
 	}
 
 	public void tick() { // Start of the methods dictate how users interact.
@@ -58,16 +41,5 @@ public class VirtualPet {
 		age = age + 1;
 
 	}
-	
-	public String petType() {
-		if(type == "1") 
-		} else { (type == "2");
-		
-		}
-		
-	}
 
-	public String boredom
-	{
-	}
 }

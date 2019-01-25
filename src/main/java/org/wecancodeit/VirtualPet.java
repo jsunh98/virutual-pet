@@ -59,11 +59,9 @@ public class VirtualPet {
 
 	}
 	
-	public String petType() {
-		if(type == "1") 
-		} else { (type == "2");
+	
 		
-		}
+		
 		
 	}
 

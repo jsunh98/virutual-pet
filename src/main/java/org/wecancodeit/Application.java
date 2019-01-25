@@ -8,41 +8,44 @@ public class Application {
 
 		Scanner input = new Scanner(System.in);
 
-		VirtualPet pet = new VirtualPet("Oprah", 10, 1, 2);
-
+		VirtualPet pet = new VirtualPet("Oprah", 0, 100, 100, 100); //created pet object. arbitarily hard coded values in constructor to set up a pet. 
+		Shelter shelter = new Shelter();// here, created object 'shelter'. can now press one to add pet to shelter. = shelter.PetToAdd
 		System.out.println("Hello. Welcome to our Virtual Pet shelter.");
 		{
-
-			System.out.println("Please choose a name for your pet");
-			String getName = input.nextLine();
+		
+			 
 			// System.out.println(getName);
 			
-			System.out.println("Please enter an age for your pet");
-			String getAge = input.nextLine();
-		    //	System.out.println(getAge);
+			System.out.println("Welcome. Here are " + pet.getName() + "'s vitals");
+			System.out.println("1. Hunger Level = " + pet.getHunger());
+			System.out.println("2. Sleep Level = " + pet.getSleepy());
+			System.out.println("3. Age = " + pet.getAge());
+			System.out.println("4. Energy = " + pet.getEnergy());
 			
-			System.out.println("Please enter how hungry your pet is on a scale of 1-5");
-			String getHunger = input.nextLine();
-			switch (getHunger) {
-			case "1":
-				System.out.println("Damn " + getName + " is starving!"); 
-			}
+			System.out.println("What would you like to do next?");
+			System.out.println("Press 1 to feed your pet"); 
+			System.out.println("Press 2 to let your pet sleep");
+			
+			int userResponse = input.nextInt();
+			
+			switch (userResponse) {
+			
+			// add rest, then add conditions / calculations to methods 
+			
+			
+			//start process of adding and removing pets 
+			
+		
 			
 			System.out.println("Would you like to feed your pet? 1 for YES 2 for NO");
 			int petFeed = input.nextInt();
-			// System.out.println(petFeed);
-			if (petFeed == 1) {
-				System.out.println("Yes");
+			
 			}
-			if (petFeed == 2) {
-				System.out.println("Congratulations you've killed " + getName);
-
-			}
-
+			
 		}
 	}
 
-	// System.out.println("Would you like an organic pet, or a robotic pet?");
+// System.out.println("Would you like an organic pet, or a robotic pet?");
 //			String petType = input.nextLine();
 //			// System.out.println(petType);
 //			System.out.println("Would you like to purchase your pet or adopt?");
@@ -61,6 +64,7 @@ public class Application {
 //
 //			System.out.println("Would you like to walk your pet? Yes or No");//
 //			System.out.println("Would you like to clean up after your pet?");
-//			System.out.println("Would you ");
+//			System.out.println("Would you play with your pet?");
+//			
 
-}
+

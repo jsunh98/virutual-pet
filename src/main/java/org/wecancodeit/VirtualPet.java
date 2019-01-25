@@ -8,15 +8,17 @@ public class VirtualPet {
 	private String name;
 	private int age;
 	private int hunger;
-	private int sleepy; 
+	private int sleepy;
+	private int energy;
 
-	public VirtualPet(String name, int age, int hunger, int sleepy) { // constructor
+	public VirtualPet(String name, int age, int hunger, int sleepy, int energy) { // constructor
 		// creating instance of a class. These are properties. Properties are states of
 		// classes.
 		this.name = name;
 		this.age = age;
 		this.hunger = hunger;
 		this.sleepy = sleepy; 
+		this.energy = energy; 
 
 	}
 
@@ -34,6 +36,10 @@ public class VirtualPet {
 	
 	public int getSleepy() {
 		return sleepy; 
+	}
+	
+	public int getEnergy() {
+		return energy; 
 	}
 
 	public void tick() { // Start of the methods dictate how users interact.

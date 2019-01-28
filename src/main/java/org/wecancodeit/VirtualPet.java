@@ -21,7 +21,21 @@ public class VirtualPet {
 		this.energy = energy; 
 
 	}
+	public VirtualPet(String name, int age) { // constructor
+		// creating instance of a class. These are properties. Properties are states of
+		// classes.
+		this.name = name;
+		this.age = age;
+		this.hunger = 20;
+		this.sleepy = 20; 
+		this.energy = 20; 
 
+	}
+	@Override
+	public String toString() {
+		return "VirtualPet [name=" + name + ", age=" + age + ", hunger=" + hunger + ", sleepy=" + sleepy + ", energy="
+				+ energy + "]";
+	}
 	public String getName() {
 		return name;
 	}
@@ -47,5 +61,9 @@ public class VirtualPet {
 		age = age + 1;
 
 	}
-
+	public void getFed() {
+		energy += 20;
+		
+		return fed;
+	}
 }

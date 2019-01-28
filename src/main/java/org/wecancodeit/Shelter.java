@@ -17,6 +17,8 @@ public class Shelter {
 		pets.put(petToAdd.getName(), petToAdd);
 
 	}
+	
+	
 
 	public HashMap<String, VirtualPet> getAllPets(){
 		return pets;
@@ -27,6 +29,13 @@ public class Shelter {
 		// For each single pet in pet collection lets do something to it.
 		singlePet.tick();
 	}
+	}
+
+
+
+	public void removeVirtualPet(String petName) {
+		pets.remove(petName);
+		
 	}
 	
 }

@@ -12,7 +12,7 @@ public class Shelter {
 	// Be able to interact with one specific pet
 	// Start of the methods dictate how users interact.
 
-	private HashMap<String, VirtualPet> pets = new HashMap<String, VirtualPet>();
+	public HashMap<String, VirtualPet> pets = new HashMap<String, VirtualPet>();
 
 	public void addVirtualPet(VirtualPet petToAdd) {
 		pets.put(petToAdd.getName(), petToAdd);
@@ -29,33 +29,32 @@ public class Shelter {
 	public void tickShelter() { // For each loop. For each single pet in shelter
 								// will call on the tick method
 		for (VirtualPet singlePet : pets.values()) {
+
 			// For each single pet in pet collection lets do something to it.
 			singlePet.tick();
 
 		}
 	}
 
-	public void feedAllPets() {
-		for (VirtualPet pet : pets.values()) { // we named pet here, call on
-												// pets.values to see all
-												// values, and getFed to feed
-												// all in hashmap
-			pet.feed();
-
-		}
-	}
-
 	public void putAllPetsToSleep() {
-		for (VirtualPet pet : pets.values()) { // again, named 'pet' here, it is
-												// a local variable that doesnt
-												// work anywhere else.
-			pet.sleep();
+		for (VirtualPet pet : getAllPets().values()) { // we named pet here, call on
+			if (pet instanceof OrganicPet) {
+				((OrganicPet) pet).sleep();// pets.values to see all
+			}
+			// values, and getSleepy to sleep
+			// all in hashmap
+
 		}
 	}
 
-	public void playWithAllPets() { 
-		for (VirtualPet pet : pets.values()) {
-			pet.play();
+	public void playWithAllPets() {
+		for (VirtualPet pet : getAllPets().values()) { // we named pet here, call on
+			if (pet instanceof OrganicPet) {
+				((OrganicPet) pet).play();// pets.values to see all
+			}
+			// values, and getSleepy to sleep
+			// all in hashmap
+
 		}
 	}
 
@@ -64,4 +63,34 @@ public class Shelter {
 
 	}
 
+	public void feedAllPets() {
+		for (VirtualPet pet : getAllPets().values()) { // we named pet here, call on
+			if (pet instanceof OrganicPet) {
+				((OrganicPet) pet).feed();// pets.values to see all
+			}
+			// values, and getFed to feed
+			// all in hashmap
+
+		}
+	}
+	public void chargeAllPets() {
+		for (VirtualPet pet : getAllPets().values()) { // we named pet here, call on
+			if (pet instanceof RoboticPet) {
+				((RoboticPet) pet).chargeBattery();// pets.values to see all
+			}
+			// values, and getFed to feed
+			// all in hashmap
+
+		}
+	}
+	public void oilChangeAllPets() {
+		for (VirtualPet pet : getAllPets().values()) { // we named pet here, call on
+			if (pet instanceof RoboticPet) {
+				((RoboticPet) pet).oilChange();// pets.values to see all
+			}
+			// values, and getFed to feed
+			// all in hashmap
+
+		}
+	}
 }

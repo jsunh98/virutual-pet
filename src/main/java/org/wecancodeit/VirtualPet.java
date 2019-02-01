@@ -5,7 +5,7 @@ import org.wecancodeit.VirtualPet;
 public class VirtualPet {
 
 	// these are instances -- these are the problems the pet faces (properties)
-	private String name;
+	private String name, type;
 	private int age;
 
 	public VirtualPet(String name, int age, int hunger, int sleepy, int energy) { // constructor
@@ -14,7 +14,7 @@ public class VirtualPet {
 		// classes.
 		this.name = name;
 		this.age = age;
-
+		this.type=type;
 	}
 
 	public VirtualPet(String name, int age) { // constructor
@@ -25,6 +25,15 @@ public class VirtualPet {
 		this.age = age;
 	}
 
+	public VirtualPet(String petUserName, String petUserType) { // name and type constructor
+		this.name = petUserName;
+		this.type = petUserType; 
+	}
+
+	public String getType() {
+		return type;
+	}
+	
 	public String getName() {
 		return name;
 	}

@@ -5,6 +5,8 @@ public class RoboticPet extends VirtualPet {
 	private int batteryLevel;
 	private int oilLevel;
 	private boolean oilChange;
+	private	String petUserName;
+	private int petUserType;
 
 	Shelter pets = new Shelter();
 	VirtualPet pet = new VirtualPet("Oprah", 5, 50, 60, 45);
@@ -16,6 +18,15 @@ public class RoboticPet extends VirtualPet {
 		this.batteryLevel = batteryLevel;
 
 	}
+	
+	public RoboticPet(String petUserName, int petUserType) {
+		super (name, age); 
+		
+		this.petUserName = petUserName;
+		this.petUserType = petUserType;
+	
+	}
+
 	public int getOilLevel() {
 		return oilLevel;
 	}

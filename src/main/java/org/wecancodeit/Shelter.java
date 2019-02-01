@@ -61,11 +61,6 @@ public class Shelter {
 
 	}
 
-	public VirtualPet interactIndividualPet(String petName) {
-		return pets.get(petName);
-
-	}
-
 	public void removeVirtualPet(String petName) {
 		pets.remove(petName);
 
@@ -91,6 +86,11 @@ public class Shelter {
 			// all in hashmap
 
 		}
+	}
+
+	public VirtualPet interactIndividualPet(String petName) {
+		return pets.get(petName);
+
 	}
 
 	public void oilChangeAllPets() {

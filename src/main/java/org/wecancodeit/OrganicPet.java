@@ -5,9 +5,14 @@ public class OrganicPet extends VirtualPet {
 	private int hunger;
 	private int sleepy;
 	private int energy;
+	private String petUserName;
+	private int petUserType;
+	
 
 	Shelter pets = new Shelter();
 	VirtualPet pet = new VirtualPet("Oprah", 0);
+
+	
 
 	public OrganicPet(String name, int age, int hunger, int sleepy, int energy) { // Calling common properties
 		// shared by all = Virtual Pet
@@ -17,11 +22,25 @@ public class OrganicPet extends VirtualPet {
 		this.hunger = hunger;
 		this.sleepy = sleepy;
 		this.energy = energy;
+		
 
 		this.hunger = 20;
 		this.sleepy = 20;
 		this.energy = 20;
 	}
+
+
+
+
+	public OrganicPet(String petUserName, int petUserType) {
+		super (name, age); 
+		
+		this.petUserName = petUserName;
+		this.petUserType = petUserType;
+	}
+
+
+
 
 	public int getHunger() {
 		return hunger;

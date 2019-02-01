@@ -16,7 +16,7 @@ public class OrganicPet extends VirtualPet {
 		this.hunger = 20;
 		this.sleepy = 20;
 		this.energy = 20;
-		
+
 	}
 
 	public int getHunger() {

@@ -20,7 +20,7 @@ public class Application {
 		pets.addVirtualPet(myRoboticPet);
 
 		System.out.println("Hello, Please select an action");
-		
+
 		while (isActive) {
 			System.out.println("1. Add a pet to the shelter");
 			System.out.println("2. Remove pet from shelter");
@@ -33,17 +33,15 @@ public class Application {
 				case 1:
 
 					System.out.println("Please enter a name for your pet");
-					
-					
+
 					String petName = input.nextLine(); // this is how we find individual pets = petUserName
 					petName = pet.getName();
-					
-					
+
 					System.out.println(
 							"would you like a robotic pet or a organic pet? \n Type 1 for Robotic \n Type 2 for Organic");
 					String petType = input.nextLine();
 					petType = pet.getType();
-					
+
 					// VirtualPet petToAdd = new VirtualPet(petUserName, petUserType); // do we need
 					// 37 38 or 41 & 45
 					// pets.addVirtualPet(petToAdd);
@@ -173,4 +171,3 @@ public class Application {
 //		System.out.println("Press 3 to see Inventory of pets");
 //		System.out.println("Press 4 to enter the shelter");
 //	}
-

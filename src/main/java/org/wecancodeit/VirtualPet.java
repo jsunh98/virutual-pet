@@ -8,9 +8,6 @@ public class VirtualPet {
 	private String name, type;
 	private int age;
 
-	
-
-
 	public VirtualPet(String name, String type, int age) { // name and type constructor
 		this.name = name;
 		this.type = type;

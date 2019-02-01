@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class Shelter {
 
-	VirtualPet pet = new VirtualPet("Fido", 0);
+	VirtualPet pet = new VirtualPet("Fido", "organic", 0);
 
 	// Build play pen and learn how to add virtual pets and remove them from
 	// play
@@ -61,8 +61,8 @@ public class Shelter {
 
 	}
 
-	public void removeVirtualPet(String petName) {
-		pets.remove(petName);
+	public void removeVirtualPet(String name) {
+		pets.remove(name);
 
 	}
 
@@ -88,8 +88,8 @@ public class Shelter {
 		}
 	}
 
-	public VirtualPet interactIndividualPet(String petName) {
-		return pets.get(petName);
+	public VirtualPet interactIndividualPet(String name) {
+		return pets.get(name);
 
 	}
 

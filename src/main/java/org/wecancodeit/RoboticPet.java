@@ -5,28 +5,20 @@ public class RoboticPet extends VirtualPet {
 	private int batteryLevel;
 	private int oilLevel;
 	private boolean oilChange;
-	private	String petUserName;
-	private int petUserType;
-
+	
 	Shelter pets = new Shelter();
-	VirtualPet pet = new VirtualPet("Oprah", 5, 50, 60, 45);
+	VirtualPet pet = new VirtualPet("Oprah", "robotic", 0);
 
-	public RoboticPet(String name, int age, boolean oilChange, int chargeBattery) {
-		super(name, age);
+	public RoboticPet(String name, String type, int age) { // Calling common properties
+		// shared by all = Virtual Pet
+		super(name, type, age);
+		
 
 		this.oilChange = false;
-		this.batteryLevel = batteryLevel;
+		this.batteryLevel = 0;
 
 	}
 	
-	public RoboticPet(String petUserName, int petUserType) {
-		super (name, age); 
-		
-		this.petUserName = petUserName;
-		this.petUserType = petUserType;
-	
-	}
-
 	public int getOilLevel() {
 		return oilLevel;
 	}

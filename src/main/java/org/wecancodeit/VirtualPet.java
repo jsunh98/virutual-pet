@@ -8,32 +8,20 @@ public class VirtualPet {
 	private String name, type;
 	private int age;
 
-	public VirtualPet(String name, int age, int hunger, int sleepy, int energy) { // constructor
-		// creating instance of a class. These are properties. Properties are
-		// states of
-		// classes.
-		this.name = name;
-		this.age = age;
-		this.type=type;
-	}
+	
 
-	public VirtualPet(String name, int age) { // constructor
-		// creating instance of a class. These are properties. Properties are
-		// states of
-		// classes.
-		this.name = name;
-		this.age = age;
-	}
 
-	public VirtualPet(String petUserName, String petUserType) { // name and type constructor
-		this.name = petUserName;
-		this.type = petUserType; 
+	public VirtualPet(String name, String type, int age) { // name and type constructor
+		this.name = name;
+		this.type = type;
+		this.age = 0;
+
 	}
 
 	public String getType() {
 		return type;
 	}
-	
+
 	public String getName() {
 		return name;
 	}

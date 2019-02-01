@@ -9,17 +9,18 @@ public class Application {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
-		VirtualPet pet = new VirtualPet("Oprah", 5, 50, 60, 45);
-		Shelter pets = new Shelter(); // this should be hash thingy.
+		VirtualPet pet = new VirtualPet("Oprah", "organic", 0);
+		Shelter pets = new Shelter(); // this should be hash thingy...
 
 		boolean isActive = true;
 
-		VirtualPet myOrganicPet = new OrganicPet("", 0, 0, 0, 0);
-		VirtualPet myRoboticPet = new RoboticPet("", 0, false, 0);
+		VirtualPet myOrganicPet = new OrganicPet("", "", 0);
+		VirtualPet myRoboticPet = new RoboticPet("", "", 0);
 		pets.addVirtualPet(myOrganicPet);
 		pets.addVirtualPet(myRoboticPet);
 
 		System.out.println("Hello, Please select an action");
+		
 		while (isActive) {
 			System.out.println("1. Add a pet to the shelter");
 			System.out.println("2. Remove pet from shelter");
@@ -32,22 +33,28 @@ public class Application {
 				case 1:
 
 					System.out.println("Please enter a name for your pet");
-					String petUserName = input.nextLine(); // this is how we find individual pets = petUserName
+					
+					
+					String petName = input.nextLine(); // this is how we find individual pets = petUserName
+					petName = pet.getName();
+					
+					
 					System.out.println(
 							"would you like a robotic pet or a organic pet? \n Type 1 for Robotic \n Type 2 for Organic");
-					int petUserType = input.nextInt();
-
+					String petType = input.nextLine();
+					petType = pet.getType();
+					
 					// VirtualPet petToAdd = new VirtualPet(petUserName, petUserType); // do we need
 					// 37 38 or 41 & 45
 					// pets.addVirtualPet(petToAdd);
 
-					if (petUserType == 2) {
-						pets.addVirtualPet(new OrganicPet(petUserName, petUserType));
+					if (petType == "2") {
+						pets.addVirtualPet(new OrganicPet(petName, petType, 0)); // actual adding
 
 					}
-					if (petUserType == 1) {
+					if (petType == "1") {
 
-						pets.addVirtualPet(new RoboticPet(petUserName, petUserType));
+						pets.addVirtualPet(new RoboticPet(petName, petType, 0));
 
 					}
 				case 3:
@@ -167,26 +174,3 @@ public class Application {
 //		System.out.println("Press 4 to enter the shelter");
 //	}
 
-// System.out.println("Would you like an organic pet, or a robotic pet?");
-// String petType = input.nextLine();
-// // System.out.println(petType);
-// System.out.println("Would you like to purchase your pet or adopt?");
-// String petSource = input.nextLine();
-// // System.out.println(petSource); --> use this to show if adopted or
-// purchased
-// // System.out.println(petSource + " a pet to be a better person"); --> this
-// is a
-// // test to make sure our variables are working
-//
-// System.out.println("What is your pet's name?"); // What the console prompts
-//
-// String petName = input.nextLine();
-//
-// System.out.println("Would you like to feed your pet?");
-//
-// String eat = input.nextLine();
-//
-// System.out.println("Would you like to walk your pet? Yes or No");//
-// System.out.println("Would you like to clean up after your pet?");
-// System.out.println("Would you play with your pet?");
-//

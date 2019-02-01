@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 public class Shelter {
 
+	VirtualPet pet = new VirtualPet("Fido", 0);
+
 	// Build play pen and learn how to add virtual pets and remove them from
 	// play
 	// pen. (Array type pool of pets) (a while loop)
@@ -52,10 +54,16 @@ public class Shelter {
 			if (pet instanceof OrganicPet) {
 				((OrganicPet) pet).play();// pets.values to see all
 			}
-			// values, and getSleepy to sleep
-			// all in hashmap
-
 		}
+
+		// values, and getSleepy to sleep
+		// all in hashmap
+
+	}
+
+	public VirtualPet interactIndividualPet(String petName) {
+		return pets.get(petName);
+
 	}
 
 	public void removeVirtualPet(String petName) {
@@ -73,6 +81,7 @@ public class Shelter {
 
 		}
 	}
+
 	public void chargeAllPets() {
 		for (VirtualPet pet : getAllPets().values()) { // we named pet here, call on
 			if (pet instanceof RoboticPet) {
@@ -83,6 +92,7 @@ public class Shelter {
 
 		}
 	}
+
 	public void oilChangeAllPets() {
 		for (VirtualPet pet : getAllPets().values()) { // we named pet here, call on
 			if (pet instanceof RoboticPet) {

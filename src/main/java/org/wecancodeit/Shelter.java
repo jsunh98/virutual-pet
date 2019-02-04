@@ -1,10 +1,18 @@
 package org.wecancodeit;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Shelter {
 
-	VirtualPet pet = new VirtualPet("Fido", "organic", 0);
+	VirtualPet myRobotPet = new RoboticPet ("", "", 0);
+	VirtualPet myOrganicPet = new OrganicPet ("", "", 0);
+	
+	private HashMap<String, VirtualPet> pets;
+	
+	public Shelter(HashMap<String, VirtualPet>pets){
+		this.pets = pets;
+	}
 
 	// Build play pen and learn how to add virtual pets and remove them from
 	// play
@@ -14,7 +22,7 @@ public class Shelter {
 	// Be able to interact with one specific pet
 	// Start of the methods dictate how users interact.
 
-	public HashMap<String, VirtualPet> pets = new HashMap<String, VirtualPet>();
+
 
 	public void addVirtualPet(VirtualPet petToAdd) {
 		pets.put(petToAdd.getName(), petToAdd);
@@ -23,12 +31,12 @@ public class Shelter {
 
 	public HashMap<String, VirtualPet> getAllPets() { // below we call on pets
 														// to getAllPets =
-														// access to hashmap
+													// access to hashmap
 		return pets;
 
 	}
-
-	public void tickShelter() { // For each loop. For each single pet in shelter
+ 
+	public void tickShelter() { // For each lpetoop. For each single pet in shelter
 								// will call on the tick method
 		for (VirtualPet singlePet : pets.values()) {
 

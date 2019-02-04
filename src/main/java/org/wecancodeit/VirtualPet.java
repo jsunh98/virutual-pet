@@ -2,7 +2,7 @@ package org.wecancodeit;
 
 import org.wecancodeit.VirtualPet;
 
-public class VirtualPet {
+public abstract class VirtualPet {
 
 	// these are instances -- these are the problems the pet faces (properties)
 	private String name, type;

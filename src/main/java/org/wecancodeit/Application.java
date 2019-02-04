@@ -8,9 +8,8 @@ public class Application {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-
-		VirtualPet pet = new VirtualPet("Oprah", "organic", 0);
-		Shelter pets = new Shelter(); // this should be hash thingy...
+		
+		Shelter pets = new Shelter(new HashMap<>()); // this should be hash thingy...
 
 		boolean isActive = true;
 

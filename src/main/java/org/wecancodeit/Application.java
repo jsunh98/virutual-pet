@@ -8,8 +8,8 @@ public class Application {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		
-		Shelter pets = new Shelter(new HashMap<>()); // this should be hash thingy...
+
+		Shelter pets = new Shelter(new HashMap<>());
 
 		boolean isActive = true;
 
@@ -30,30 +30,33 @@ public class Application {
 			while (userInput1 <= 3) {
 				switch (userInput1) {
 				case 1:
-
-					System.out.println("Please enter a name for your pet");
-
-					String petName = input.nextLine(); // this is how we find individual pets = petUserName
-					petName = pet.getName();
-
 					System.out.println(
 							"would you like a robotic pet or a organic pet? \n Type 1 for Robotic \n Type 2 for Organic");
 					String petType = input.nextLine();
-					petType = pet.getType();
+					if (petType == "1") {
+						petType = myRoboticPet.getType();
+						System.out.println("Please enter a name for your pet");
+
+						String petName = input.nextLine(); // this is how we find individual pets = petUserName
+						petName = myRoboticPet.getName();
+						pets.addVirtualPet(new RoboticPet(petName, petType, 0));
+					}
+					if (petType == "2") {
+						petType = myOrganicPet.getType();
+						System.out.println("Please enter a name for your pet");
+
+						String petName = input.nextLine(); // this is how we find individual pets = petUserName
+						petName = myOrganicPet.getName();
+						pets.addVirtualPet(new OrganicPet(petName, petType, 0)); // actual adding
+
+					}
 
 					// VirtualPet petToAdd = new VirtualPet(petUserName, petUserType); // do we need
 					// 37 38 or 41 & 45
 					// pets.addVirtualPet(petToAdd);
 
-					if (petType == "2") {
-						pets.addVirtualPet(new OrganicPet(petName, petType, 0)); // actual adding
-
-					}
-					if (petType == "1") {
-
-						pets.addVirtualPet(new RoboticPet(petName, petType, 0));
-
-					}
+					
+				
 				case 3:
 
 					System.out.println(pets.getAllPets()); // print out inventory?

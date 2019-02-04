@@ -6,8 +6,7 @@ public class OrganicPet extends VirtualPet {
 	private int sleepy;
 	private int energy;
 
-	Shelter pets = new Shelter();
-	VirtualPet pet = new VirtualPet("Oprah", "organic", 0);
+	VirtualPet pet = new OrganicPet("Oprah", "organic", 0);
 
 	public OrganicPet(String name, String type, int age) { // Calling common properties
 		// shared by all = Virtual Pet

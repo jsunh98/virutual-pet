@@ -13,54 +13,66 @@ public class Application {
 
 		boolean isActive = true;
 
-		VirtualPet myOrganicPet = new OrganicPet("", "", 0);
-		VirtualPet myRoboticPet = new RoboticPet("", "", 0);
+		VirtualPet myOrganicPet = new OrganicPet("Jeff", "organic", 0);
+		VirtualPet myRoboticPet = new RoboticPet("Bill", "robotic", 0);
 		pets.addVirtualPet(myOrganicPet);
 		pets.addVirtualPet(myRoboticPet);
 
-		System.out.println("Hello, Please select an action");
-
+		System.out.println("Your goal is to keep your pet alive. Select the options below to begin");
+		
 		while (isActive) {
-			System.out.println("1. Add a pet to the shelter");
-			System.out.println("2. Remove pet from shelter");
-			System.out.println("3. List all pets in shelter");
-			System.out.println("4. Play with individual pet");
-
+			System.out.println("What would you like to do next?");
+			System.out.println("Press 1 to add a pet");
+			System.out.println("Press 2 to remove a pet");
+			System.out.println("Press 3 to see Inventory of pets");
+			System.out.println("Press 4 to enter the shelter");
+			System.out.println("");
 			int userInput1 = input.nextInt();
-			while (userInput1 <= 3) {
-				switch (userInput1) {
-				case 1:
-					System.out.println(
-							"would you like a robotic pet or a organic pet? \n Type 1 for Robotic \n Type 2 for Organic");
-					String petType = input.nextLine();
-					if (petType == "1") {
-						petType = myRoboticPet.getType();
-						System.out.println("Please enter a name for your pet");
-
-						String petName = input.nextLine(); // this is how we find individual pets = petUserName
-						petName = myRoboticPet.getName();
-						pets.addVirtualPet(new RoboticPet(petName, petType, 0));
-					}
-					if (petType == "2") {
-						petType = myOrganicPet.getType();
-						System.out.println("Please enter a name for your pet");
-
-						String petName = input.nextLine(); // this is how we find individual pets = petUserName
-						petName = myOrganicPet.getName();
-						pets.addVirtualPet(new OrganicPet(petName, petType, 0)); // actual adding
-
-					}
-
-					// VirtualPet petToAdd = new VirtualPet(petUserName, petUserType); // do we need
-					// 37 38 or 41 & 45
-					// pets.addVirtualPet(petToAdd);
-
-					
+			input.nextLine(); // clear the input line 
+			switch (userInput1) {
+			case 1:
+				System.out.println(
+						"Would you like a robotic pet or a organic pet? \n Type 1 for Robotic \n Type 2 for Organic");
+				String petType = input.nextLine();
+				if (petType.equals("1")) {
+					petType = myRoboticPet.getType();
+					System.out.println("Please enter a name for your pet");
 				
-				case 3:
-
-					System.out.println(pets.getAllPets()); // print out inventory?
+					String petName = input.nextLine(); // this is how we find individual pets = petUserName
+					petName = myRoboticPet.getName();
+					pets.addVirtualPet(new RoboticPet(petName, petType, 0));
+					System.out.println("Here are all your pets");
+				//	System.out.println(pets.getAllPets());
+					
 				}
+				if (petType.equals("2")) {
+					petType = myOrganicPet.getType();
+					System.out.println("Please enter a name for your pet");
+
+					String petName = input.nextLine(); // this is how we find individual pets = petUserName
+					petName = myOrganicPet.getName();
+					pets.addVirtualPet(new OrganicPet(petName, petType, 0)); // actual adding
+
+					System.out.println("Here are all your pets");
+
+					System.out.println(pets.getAllPets());
+					
+				}
+				break;
+			case 2: 
+				System.out.println("Here is a list of your pets. Which one would you like to remove?");
+				System.out.println(pets.getAllPets());
+				String petName = input.nextLine(); // this is how we find individual pets = petUserName
+				pets.removeVirtualPet(petName);
+				System.out.println(pets.getAllPets());
+				break;
+			
+
+			case 3: 
+
+				System.out.println(pets.getAllPets()); // print out inventory?
+				break;
+			
 			}
 		}
 	}

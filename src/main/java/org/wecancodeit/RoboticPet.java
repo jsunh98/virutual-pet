@@ -6,7 +6,7 @@ public class RoboticPet extends VirtualPet {
 	private int oilLevel;
 	private boolean oilChange;
 
-	VirtualPet pet = new RoboticPet("Oprah", "robotic", 0);
+//	VirtualPet pet = new RoboticPet("Oprah", "robotic", 0);
 
 	public RoboticPet(String name, String type, int age) { // Calling common properties
 		// shared by all = Virtual Pet

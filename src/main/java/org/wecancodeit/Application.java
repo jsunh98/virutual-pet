@@ -10,7 +10,9 @@ public class Application {
 		Scanner input = new Scanner(System.in);
 
 		Shelter pets = new Shelter(new HashMap<>());
-
+		Dog dog1 = new Dog("", "", 0);
+		Fish fish1 = new Fish("", "", 0);
+		String petSpecies = null;
 		boolean isActive = true;
 
 		VirtualPet myOrganicPet = new OrganicPet("Jeff", "organic", 0);
@@ -38,12 +40,12 @@ public class Application {
 				if (petType.equals("1")) {
 					// petType = myRoboticPet.getType();
 					System.out.println("Please enter a name for your pet");
-
+				
 					petName = input.nextLine(); // this is how we find individual pets = petUserName
 					pets.addVirtualPet(new RoboticPet(petName, petType, 0));
 					System.out.println("Here are all your pets");
 					System.out.println(pets.getAllPets());
-
+				
 				}
 				if (petType.equals("2")) {
 					petType = myOrganicPet.getType();
@@ -52,7 +54,18 @@ public class Application {
 					pets.addVirtualPet(new OrganicPet(petName, petType, 0)); // actual adding
 					System.out.println("Here are all your pets");
 					System.out.println(pets.getAllPets());
+					
+				}
+				System.out.println("Would you like a dog or fish?");
+				if (petSpecies.equals("1")) {
+					petSpecies = dog1.getSpecies();
+					System.out.println(pets.getAllPets());
 
+				if (petSpecies.equals("2")) {
+					petSpecies = fish1.getSpecies();
+					System.out.println(pets.getAllPets());
+				}
+					
 				}
 				break;
 			case 2:
@@ -108,5 +121,10 @@ public class Application {
 
 			}
 		}
+	}
+
+	private static String inputnextLine() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

@@ -4,7 +4,8 @@ public class Dog extends VirtualPet implements Walkable{
 
 	public Dog(String name, String type, int age) {
 		super(name, type, age);
-
+		
+	
 	}
 
 	public void run() {
@@ -14,5 +15,11 @@ public class Dog extends VirtualPet implements Walkable{
 	@Override
 	public void walk() {
 		System.out.println("the dog is walking...");
+	}
+
+	@Override
+	public void energizePet() {
+		
+		
 	}
 }

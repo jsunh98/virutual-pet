@@ -33,6 +33,10 @@ public abstract class VirtualPet {
 
 	}
 	
+	public String getSpecies() {
+		
+		return null;
+	}
 	public abstract void energizePet ();
 
 	@Override

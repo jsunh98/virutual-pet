@@ -26,7 +26,7 @@ public class Shelter {
 
 	public void addVirtualPet(VirtualPet petToAdd) {
 		pets.put(petToAdd.getName(), petToAdd);
-
+		
 	}
 
 	public HashMap<String, VirtualPet> getAllPets() { // below we call on pets

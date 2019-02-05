@@ -14,18 +14,23 @@ public class VirtualPetTest {
 	@Test
 	public void petShouldHaveName() {
 		VirtualPet underTest = new OrganicPet("Jeff","", 0);
-
 		String expected = underTest.getName();
-
 		assertEquals(expected, "Jeff");
 	}
 
+	
+	@Test 
+	public void shouldLetPetSleep() {
+		
+	}
+	
+	@Test 
+	public void shouldChargeBattery() {
+		
+	}
+	
 	@Test
-    public void shouldHaveDefaultHunger() {
-        OrganicPet underTest = new OrganicPet("Oprah", "organic", 0);
-
-        int expected = ((OrganicPet.underTest.getHunger()));
-
-        assertEquals(expected, 10);
-    }
+	public void shouldChangeOil() {
+		
+	}
 }

@@ -111,7 +111,7 @@ public class Shelter {
 	public void oilChangeAllPets() {
 		for (VirtualPet pet : getAllPets().values()) { // we named pet here, call on
 			if (pet instanceof RoboticPet) {
-				((RoboticPet) pet).oilChange();// pets.values to see all
+				((RoboticPet) pet).getOilChange();// pets.values to see all
 			}
 			// values, and getFed to feed
 			// all in hashmap

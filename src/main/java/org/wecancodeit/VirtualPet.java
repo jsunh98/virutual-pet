@@ -29,7 +29,7 @@ public abstract class VirtualPet {
 	}
 
 	public void tick() { // Start of the methods dictate how users interact.
-		age += age;
+		age += 1;
 
 	}
 	

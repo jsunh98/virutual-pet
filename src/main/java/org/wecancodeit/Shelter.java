@@ -35,7 +35,10 @@ public class Shelter {
 		return pets;
 
 	}
- 
+	public int getPetsLength() {
+		return pets.size();
+	}
+
 	public void tickShelter() { // For each lpetoop. For each single pet in shelter
 								// will call on the tick method
 		for (VirtualPet singlePet : pets.values()) {

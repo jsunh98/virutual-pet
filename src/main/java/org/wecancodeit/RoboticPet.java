@@ -4,7 +4,7 @@ public class RoboticPet extends VirtualPet {
 
 	private int batteryLevel;
 	private int oilLevel;
-	private boolean oilChange;
+	private Boolean oilChange;
 
 //	VirtualPet pet = new RoboticPet("Oprah", "robotic", 0);
 

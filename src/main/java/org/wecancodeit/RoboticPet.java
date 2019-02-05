@@ -44,10 +44,16 @@ public class RoboticPet extends VirtualPet {
 		oilChange = true;
 
 	}
+	@Override
+	public void energizePet() {
+		batteryLevel = 100;
+	}
 
 	public void playMode() {
 		batteryLevel -= 25;
 
 	}
+
+
 
 }

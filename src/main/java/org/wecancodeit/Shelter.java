@@ -81,8 +81,12 @@ public class Shelter {
 			}
 			// values, and getFed to feed
 			// all in hashmap
-
+            // if to see if robotic or organic //then call robotic method or organic method (charge or sleep). 
 		}
+	}
+	
+	public void chargeAllRobots() {
+		
 	}
 
 	public void chargeAllPets() {

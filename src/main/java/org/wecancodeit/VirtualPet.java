@@ -15,12 +15,13 @@ public abstract class VirtualPet {
 
 	}
 
-	public String getType() {
-		return type;
-	}
-
 	public String getName() {
 		return name;
+	}
+
+	public String getType() {
+		return type;
+
 	}
 
 	public int getAge() {
@@ -31,5 +32,11 @@ public abstract class VirtualPet {
 		age += age;
 
 	}
+	
+	public abstract void energizePet ();
 
+	@Override
+	public String toString() {
+		return "\nPet [name=" + name + ", type=" + type + ", age=" + age + "]";
+	}
 }

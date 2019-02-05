@@ -57,4 +57,10 @@ public class OrganicPet extends VirtualPet {
 		hunger = hunger + 10;
 
 	}
+	@Override
+	public void energizePet() {
+		sleepy = 0;
+	}
+
+
 }

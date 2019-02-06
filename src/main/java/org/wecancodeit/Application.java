@@ -10,15 +10,12 @@ public class Application {
 		Scanner input = new Scanner(System.in);
 
 		Shelter pets = new Shelter(new HashMap<>());
-		Dog dog1 = new Dog("", "", 0);
-		Fish fish1 = new Fish("", "", 0);
-		String petSpecies = null;
 		boolean isActive = true;
 
-		VirtualPet myOrganicPet = new OrganicPet("Jeff", "organic", 0);
-		VirtualPet myRoboticPet = new RoboticPet("Bill", "robotic", 0);
-		pets.addVirtualPet(myOrganicPet);
-		pets.addVirtualPet(myRoboticPet);
+		VirtualPet jeff = new OrganicFish("Jeff", "organic", 0);
+		VirtualPet bill = new OrganicDog ("Bill", "robotic", 0);
+		pets.addVirtualPet(bill);
+		pets.addVirtualPet(jeff);
 
 		String petName = null;
 		System.out.println("Your goal is to keep your pet alive. Select the options below to begin");
@@ -123,8 +120,12 @@ public class Application {
 		}
 	}
 
-	private static String inputnextLine() {
+	//private static String inputnextLine() {
 		// TODO Auto-generated method stub
-		return null;
+	//	return null;
 	}
-}
+
+
+//		Dog dog1 = new Dog("", "", 0);
+//		Fish fish1 = new Fish("", "", 0);
+//		String petSpecies = null;

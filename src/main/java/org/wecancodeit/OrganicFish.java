@@ -1,8 +1,8 @@
 package org.wecancodeit;
 
-public class Fish extends VirtualPet {
+public class OrganicFish extends VirtualPet {
 
-	public Fish(String name, String type, int age) {
+	public OrganicFish(String name, String type, int age) {
 		super(name, type, age);
 
 	}

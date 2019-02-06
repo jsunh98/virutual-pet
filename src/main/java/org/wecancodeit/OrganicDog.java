@@ -1,8 +1,8 @@
 package org.wecancodeit;
 
-public class Dog extends VirtualPet implements Walkable{
+public class OrganicDog extends VirtualPet implements Walkable{
 
-	public Dog(String name, String type, int age) {
+	public OrganicDog(String name, String type, int age) {
 		super(name, type, age);
 		
 	

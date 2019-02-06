@@ -56,8 +56,8 @@ public class ShelterTest {
 			underTest.addVirtualPet(new RoboticPet("pat","",0));//creates new pet to pass through test
 			underTest.addVirtualPet(new RoboticPet("spot","",0));//creates new pet to pass through test
 			underTest.oilChangeAllPets();
-			assertEquals(((RoboticPet)underTest.interactIndividualPet("pat")).isOilChange(), true);
-			assertEquals(((RoboticPet)underTest.interactIndividualPet("spot")).isOilChange(), true);
+			assertEquals(((RoboticPet)underTest.interactIndividualPet("pat")).getOilChange(), true);
+			assertEquals(((RoboticPet)underTest.interactIndividualPet("spot")).getOilChange(), true);
 			
 		}
 		

@@ -18,19 +18,12 @@ public class VirtualPetTest {
 		assertEquals(expected, "Jeff");
 	}
 
-	
-	@Test 
-	public void shouldLetPetSleep() {
-		
-	}
-	
-	@Test 
-	public void shouldChargeBattery() {
-		
-	}
-	
 	@Test
-	public void shouldChangeOil() {
-		
+	public void shouldTick() {
+		VirtualPet underTest = new OrganicPet("Jeff","", 0);
+		int initialPetAge = ((OrganicPet)underTest).getAge();
+		((OrganicPet)underTest).tick();
+		int petAgeAfterTick = ((OrganicPet)underTest).getAge();
+		assertEquals(initialPetAge + 1, petAgeAfterTick);
 	}
 }

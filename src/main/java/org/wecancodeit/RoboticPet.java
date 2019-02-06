@@ -11,37 +11,32 @@ public class RoboticPet extends VirtualPet {
 	public RoboticPet(String name, String type, int age) { // Calling common properties
 		// shared by all = Virtual Pet
 		super(name, type, age);
-
-		this.oilChange = false;
+		
+		this.oilLevel = 100;
+		this.oilChange(false);
 		this.batteryLevel = 0;
-
+		
 	}
 
 	public int getOilLevel() {
 		return oilLevel;
 	}
 
-	public boolean isOilChange() {
+	public Boolean getOilChange() {
 		return oilChange;
 	}
+
 
 	public int getBatteryLevel() {
 		return batteryLevel;
 	}
 
-
-	public void tick() {
-		oilLevel -= 10;
-		batteryLevel -= 15;
-	}
-
 	public void chargeBattery() {
 		batteryLevel += 100;
-
 	}
 
-	public void oilChange() {
-		oilChange = true;
+	public void oilChange(boolean b) {
+		oilChange=(true);
 
 	}
 	@Override
@@ -54,6 +49,14 @@ public class RoboticPet extends VirtualPet {
 
 	}
 
+	public void tick() {
+		oilLevel -= 10;
+		batteryLevel -= 15;
+		
+	}
+
+
+	
 
 
 }

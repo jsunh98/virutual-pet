@@ -36,9 +36,9 @@ public class Application {
 			System.out.println("Press 4 to enter the shelter");
 			int userInput1 = input.nextInt();
 			input.nextLine(); // clear the input line
-			
+
 			String petSpecies = input.nextLine();
-			
+
 			switch (userInput1) {
 			case (1):
 				System.out.println("Would you like a robotic pet or a organic pet? ");
@@ -63,31 +63,28 @@ public class Application {
 
 						System.out.println("Here are all your pets");
 						System.out.println(pets.getAllPets());
-					
-					}
-					if (petType.equalsIgnoreCase("organic")) {
-						System.out.println("Please enter a name for your pet");
-						petName = input.nextLine();
-	
-						System.out.println("Would you like a dog or fish?");
-						petSpecies = input.nextLine();
-						if (petSpecies.equalsIgnoreCase("dog")) {
-							pets.addVirtualPet(new OrganicDog(petName, petType, 0)); // actual adding
-					
-							System.out.println("Here are all your pets");
-							System.out.println(pets.getAllPets());
-						}
-						if (petSpecies.equalsIgnoreCase("fish")) {
-							pets.addVirtualPet(new OrganicFish(petName, petType, 0)); // actual adding
-//									petSpecies = OrganicFish.getSpecies();
-							System.out.println("Here are all your pets");
-							System.out.println(pets.getAllPets());
-
-						
 
 					}
-
 				}
+				if (petType.equalsIgnoreCase("organic")) {
+					System.out.println("Please enter a name for your pet");
+					petName = input.nextLine();
+
+					System.out.println("Would you like a dog or fish?");
+					petSpecies = input.nextLine();
+					if (petSpecies.equalsIgnoreCase("dog")) {
+						pets.addVirtualPet(new OrganicDog(petName, petType, 0)); // actual adding
+
+						System.out.println("Here are all your pets");
+						System.out.println(pets.getAllPets());
+					}
+					if (petSpecies.equalsIgnoreCase("fish")) {
+						pets.addVirtualPet(new OrganicFish(petName, petType, 0)); // actual adding
+//									petSpecies = OrganicFish.getSpecies();
+						System.out.println("Here are all your pets");
+						System.out.println(pets.getAllPets());
+
+					}
 				}
 				break;
 
@@ -111,35 +108,30 @@ public class Application {
 				System.out.println("Press 3 to let all pets sleep");
 				System.out.println("Press 4 to interact with a single pet");
 				System.out.println("Press 5 to view inventory");
-				
-			int userResponse2 = input.nextInt();
-pets.tickShelter();
-				while (userResponse2 < 5)
-					
-				switch (userResponse2) {
+				int userResponse2 = input.nextInt();
+				while (userResponse2 < 5) {
+					switch (userResponse2) {
 
-				case (1):
-					pets.feedAllPets();
-					System.out.println("All Pets have been fed!");
-					break;
-				case (2):
-					pets.playWithAllPets();
-					System.out.println("You have played with all pets!");
-					break;
-				case (3):
-					pets.putAllPetsToSleep();
-					System.out.println("All Pets have been put to sleep!");
-					pets.tickShelter();// put at end of loop, and will tick
-					break;
-					// shelter
-				case (4):
-					System.out.println("Which pet would you like to interact with? Please enter their name");
-					System.out.println(pets.getAllPets());
-					petName = input.nextLine();
-					pets.interactIndividualPet(petName);
-					break;
+					case (1):
+						pets.feedAllPets();
+						System.out.println("All pets have been fed!");
+					case (2):
+						pets.playWithAllPets();
+						System.out.println("You have played with all pets!");
+					case (3):
+						pets.putAllPetsToSleep();
+						System.out.println("All Pets have been put to sleep!");
+						pets.tickShelter();// put at end of loop, and will tick
+						// shelter
+					case (4):
+						System.out.println("Which pet would you like to interact with? Please enter their name");
+						System.out.println(pets.getAllPets());
+						petName = input.nextLine();
+						System.out.println(pets.interactIndividualPet(petName));
+
+					}
+
 				}
-				pets.tickShelter();
 			}
 		}
 	}

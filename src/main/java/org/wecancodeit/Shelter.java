@@ -9,12 +9,12 @@ import parentClass.VirtualPet;
 
 public class Shelter {
 
-	VirtualPet myRobotPet = new RoboticPet ("", "", 0);
-	VirtualPet myOrganicPet = new OrganicPet ("", "", 0);
-	
+	VirtualPet myRobotPet = new RoboticPet("", "", 0);
+	VirtualPet myOrganicPet = new OrganicPet("", "", 0);
+
 	private HashMap<String, VirtualPet> pets;
-	
-	public Shelter(HashMap<String, VirtualPet>pets){
+
+	public Shelter(HashMap<String, VirtualPet> pets) {
 		this.pets = pets;
 	}
 
@@ -26,19 +26,18 @@ public class Shelter {
 	// Be able to interact with one specific pet
 	// Start of the methods dictate how users interact.
 
-
-
 	public void addVirtualPet(VirtualPet petToAdd) {
 		pets.put(petToAdd.getName(), petToAdd);
-		
+
 	}
 
 	public HashMap<String, VirtualPet> getAllPets() { // below we call on pets
 														// to getAllPets =
-													// access to hashmap
+														// access to hashmap
 		return pets;
 
 	}
+
 	public int getPetsLength() {
 		return pets.size();
 	}
@@ -88,12 +87,13 @@ public class Shelter {
 			}
 			// values, and getFed to feed
 			// all in hashmap
-            // if to see if robotic or organic //then call robotic method or organic method (charge or sleep). 
+			// if to see if robotic or organic //then call robotic method or organic method
+			// (charge or sleep).
 		}
 	}
-	
+
 	public void chargeAllRobots() {
-		
+
 	}
 
 	public void chargeAllPets() {
@@ -117,9 +117,9 @@ public class Shelter {
 			if (pet instanceof RoboticPet) {
 				((RoboticPet) pet).getOilChange();// pets.values to see all
 			}
-			// values, and getFed to feed
-			// all in hashmap
+		} // values, and getFed to feed
+	} // all in hashmap
 
-		}
-	}
+	
+
 }

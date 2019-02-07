@@ -72,5 +72,13 @@ public class ShelterTest {
 			assertEquals(((OrganicPet)underTest.interactIndividualPet("sam")).getSleepy(), 0);
 		}	
 		
+		@Test
+		public void shouldGetStatusOfAllPets() {
+			VirtualPet underTest = new OrganicPet("Dave","",0);
+			
+			((OrganicPet)underTest).status();
+			int statsAfterStatus = ((OrganicPet)underTest.getStatus());
+			
+		}
 		
 	}

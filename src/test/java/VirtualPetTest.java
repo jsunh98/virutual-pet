@@ -3,6 +3,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import orgRobClass.OrganicPet;
+import orgRobClass.RoboticPet;
 import parentClass.VirtualPet;
 
 public class VirtualPetTest {
@@ -27,4 +28,6 @@ public class VirtualPetTest {
 		int petAgeAfterTick = ((OrganicPet)underTest).getAge();
 		assertEquals(initialPetAge + 1, petAgeAfterTick);
 	}
+	
+	
 }

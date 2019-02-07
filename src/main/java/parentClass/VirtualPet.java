@@ -1,5 +1,6 @@
 package parentClass;
 
+import orgRobClass.OrganicPet;
 import parentClass.VirtualPet;
 
 public abstract class VirtualPet {
@@ -43,4 +44,6 @@ public abstract class VirtualPet {
 	public String toString() {
 		return "\nPet [name=" + name + ", type=" + type + ", age=" + age + "]";
 	}
+
+	
 }

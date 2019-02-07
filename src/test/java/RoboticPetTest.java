@@ -1,8 +1,9 @@
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-import org.wecancodeit.RoboticPet;
-import org.wecancodeit.VirtualPet;
+
+import orgRobClass.RoboticPet;
+import parentClass.VirtualPet;
 
 public class RoboticPetTest {
 

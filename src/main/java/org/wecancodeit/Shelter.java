@@ -3,6 +3,10 @@ package org.wecancodeit;
 import java.util.HashMap;
 import java.util.Map;
 
+import orgRobClass.OrganicPet;
+import orgRobClass.RoboticPet;
+import parentClass.VirtualPet;
+
 public class Shelter {
 
 	VirtualPet myRobotPet = new RoboticPet ("", "", 0);

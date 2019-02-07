@@ -1,6 +1,9 @@
-package org.wecancodeit;
+package childClasses;
 
-public class RoboticFish extends VirtualPet {
+import interfaces.Swims;
+import orgRobClass.RoboticPet;
+
+public class RoboticFish extends RoboticPet implements Swims {
 
 	public RoboticFish(String name, String type, int age) {
 		super(name, type, age);

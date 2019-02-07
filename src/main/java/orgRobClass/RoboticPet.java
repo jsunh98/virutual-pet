@@ -1,4 +1,6 @@
-package org.wecancodeit;
+package orgRobClass;
+
+import parentClass.VirtualPet;
 
 public class RoboticPet extends VirtualPet {
 
@@ -52,7 +54,7 @@ public class RoboticPet extends VirtualPet {
 	public void tick() {
 		oilLevel -= 10;
 		batteryLevel -= 15;
-		
+		super.tick();
 	}
 
 

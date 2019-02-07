@@ -1,4 +1,6 @@
-package org.wecancodeit;
+package orgRobClass;
+
+import parentClass.VirtualPet;
 
 public class OrganicPet extends VirtualPet {
 

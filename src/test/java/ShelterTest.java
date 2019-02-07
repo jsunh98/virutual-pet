@@ -3,10 +3,11 @@ import static org.junit.Assert.assertEquals;
 import java.util.HashMap;
 
 import org.junit.Test;
-import org.wecancodeit.OrganicPet;
-import org.wecancodeit.RoboticPet;
 import org.wecancodeit.Shelter;
-import org.wecancodeit.VirtualPet;
+
+import orgRobClass.OrganicPet;
+import orgRobClass.RoboticPet;
+import parentClass.VirtualPet;
 
 public class ShelterTest {
 	

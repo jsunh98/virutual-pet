@@ -1,6 +1,9 @@
-package org.wecancodeit;
+package childClasses;
 
-public class OrganicDog extends VirtualPet implements Walkable{
+import interfaces.Walkable;
+import orgRobClass.OrganicPet;
+
+public class OrganicDog extends OrganicPet implements Walkable{
 
 	public OrganicDog(String name, String type, int age) {
 		super(name, type, age);

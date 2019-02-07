@@ -1,8 +1,9 @@
 	import static org.junit.Assert.*;
 	
 	import org.junit.Test;
-	import org.wecancodeit.OrganicPet;
-	import org.wecancodeit.VirtualPet;
+
+import orgRobClass.OrganicPet;
+import parentClass.VirtualPet;
 	
 	public class OrganicPetTest {
 	

@@ -1,4 +1,4 @@
-package org.wecancodeit;
+package interfaces;
 
 public interface Walkable {
 

@@ -1,6 +1,6 @@
-package org.wecancodeit;
+package parentClass;
 
-import org.wecancodeit.VirtualPet;
+import parentClass.VirtualPet;
 
 public abstract class VirtualPet {
 
@@ -33,7 +33,7 @@ public abstract class VirtualPet {
 
 	}
 	
-	public String getSpecies() {
+	public static String getSpecies() {
 		
 		return null;
 	}

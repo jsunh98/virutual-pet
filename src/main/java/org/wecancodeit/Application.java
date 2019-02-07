@@ -1,15 +1,12 @@
 package org.wecancodeit;
 
 import java.util.HashMap;
-import java.util.Collection;
 import java.util.Scanner;
 
 import childClasses.OrganicDog;
 import childClasses.OrganicFish;
 import childClasses.RoboticDog;
 import childClasses.RoboticFish;
-import orgRobClass.OrganicPet;
-import orgRobClass.RoboticPet;
 import parentClass.VirtualPet;
 
 public class Application {
@@ -114,30 +111,35 @@ public class Application {
 				System.out.println("Press 3 to let all pets sleep");
 				System.out.println("Press 4 to interact with a single pet");
 				System.out.println("Press 5 to view inventory");
-				int userResponse2 = input.nextInt();
+				
+			int userResponse2 = input.nextInt();
+pets.tickShelter();
 				while (userResponse2 < 5)
-					;
+					
 				switch (userResponse2) {
 
 				case (1):
 					pets.feedAllPets();
 					System.out.println("All Pets have been fed!");
+					break;
 				case (2):
 					pets.playWithAllPets();
 					System.out.println("You have played with all pets!");
+					break;
 				case (3):
 					pets.putAllPetsToSleep();
 					System.out.println("All Pets have been put to sleep!");
 					pets.tickShelter();// put at end of loop, and will tick
+					break;
 					// shelter
 				case (4):
 					System.out.println("Which pet would you like to interact with? Please enter their name");
 					System.out.println(pets.getAllPets());
 					petName = input.nextLine();
 					pets.interactIndividualPet(petName);
-
+					break;
 				}
-
+				pets.tickShelter();
 			}
 		}
 	}

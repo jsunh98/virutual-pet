@@ -24,6 +24,8 @@ public class Application {
 
 		pets.addVirtualPet(bill);
 		pets.addVirtualPet(jeff);
+		pets.addVirtualPet(fastEddy);
+		pets.addVirtualPet(amanda);
 
 		String petName = null;
 		System.out.println("Your goal is to keep your pet alive. Select the options below to begin");
@@ -36,8 +38,7 @@ public class Application {
 			System.out.println("Press 4 to enter the shelter");
 			int userInput1 = input.nextInt();
 			input.nextLine(); // clear the input line
-
-			String petSpecies = input.nextLine();
+			String petSpecies;
 
 			switch (userInput1) {
 			case (1):
@@ -98,7 +99,8 @@ public class Application {
 
 			case (3):
 
-				System.out.println(pets.getAllPets()); // print out inventory?
+				pets.getAllPetStats(); // print out inventory?
+
 				break;
 
 			case (4):
@@ -108,34 +110,68 @@ public class Application {
 				System.out.println("Press 3 to let all pets sleep");
 				System.out.println("Press 4 to interact with a single pet");
 				System.out.println("Press 5 to view inventory");
+
 				int userResponse2 = input.nextInt();
-				while (userResponse2 < 5) {
+				input.nextLine();
+				while (userResponse2 < 6) {
 					switch (userResponse2) {
 
 					case (1):
 						pets.feedAllPets();
 						System.out.println("All pets have been fed!");
+
+						break;
 					case (2):
 						pets.playWithAllPets();
 						System.out.println("You have played with all pets!");
+
+						break;
 					case (3):
 						pets.putAllPetsToSleep();
 						System.out.println("All Pets have been put to sleep!");
 						pets.tickShelter();// put at end of loop, and will tick
-						// shelter
+
+						break;
+
 					case (4):
+						Boolean foo = true;
+
 						System.out.println("Which pet would you like to interact with? Please enter their name");
 						System.out.println(pets.getAllPets());
-						petName = input.nextLine();
-						System.out.println(pets.interactIndividualPet(petName));
+						String selectedPet = input.nextLine();
+						VirtualPet petInteractingWith = pets.getPet(selectedPet);
+						petInteractingWith.stats();
 
+						while (foo) {
+							System.out.println("What would you like to do with your pet?");
+							System.out.println("Press 1 to energize your pet your pet");
+							System.out.println("Press 2 to play with your pet");
+							String userResponse3 = input.nextLine();
+							switch (userResponse3) {
+
+							case "1":
+								petInteractingWith.energizePet();
+								petInteractingWith.stats();
+								break;
+							case "2":
+								petInteractingWith.play();
+								petInteractingWith.stats();
+
+							}
+						}
+						break;
+					case (5):
+						System.out.println(pets.getAllPets());
+						
+						System.exit(0);
+						break;
 					}
-
 				}
 			}
 		}
 	}
 }
+
 // private static String inputnextLine() {
 // TODO Auto-generated method stub
 // return null;

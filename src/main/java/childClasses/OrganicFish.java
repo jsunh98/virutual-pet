@@ -17,6 +17,10 @@ public class OrganicFish extends OrganicPet implements Swims {
 	public void layEggs() {
 		System.out.println("laid eggs...");
 	}
+	public void stats () {
+		super.stats();
+		System.out.println("your animal can swim and lay eggs");
+	}
 
 	@Override
 	public void energizePet() {

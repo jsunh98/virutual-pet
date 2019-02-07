@@ -14,6 +14,10 @@ public class OrganicDog extends OrganicPet implements Walkable{
 	public void run() {
 		System.out.println("is running...");
 	}
+	public void stats () {
+		super.stats();
+		System.out.println("your animal can run and poo poo");
+	}
 
 	@Override
 	public void walk() {

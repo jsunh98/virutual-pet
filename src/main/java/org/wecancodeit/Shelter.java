@@ -74,6 +74,11 @@ public class Shelter {
 		// all in hashmap
 
 	}
+	public void getAllPetStats() {
+		for (VirtualPet pets : pets.values()) {
+			pets.stats();
+		}
+	}
 
 	public void removeVirtualPet(String name) {
 		pets.remove(name);
@@ -107,7 +112,7 @@ public class Shelter {
 		}
 	}
 
-	public VirtualPet interactIndividualPet(String name) {
+	public VirtualPet getPet(String name) {
 		return pets.get(name);
 
 	}

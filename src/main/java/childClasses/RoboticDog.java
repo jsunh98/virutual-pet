@@ -10,18 +10,19 @@ public class RoboticDog extends RoboticPet implements Walkable{
 		
 	}
 	
-	
+	public void stats() {
+		super.stats();
+		System.out.println("your animal can run");
+
+	}
+
 	
 	public void foo () {
 		System.out.println("fooing");
 		
 	}
 
-	@Override
-	public void energizePet() {
-		
-		
-	}
+	
 
 	@Override
 	public void walk() {

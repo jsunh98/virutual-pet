@@ -12,9 +12,10 @@ public class RoboticFish extends RoboticPet implements Swims {
 	public void swim() {
 
 	}
-
-	@Override
-	public void energizePet() {
-
+	
+	public void stats () {
+		super.stats();
+		System.out.println("your fishy can swim");
 	}
+	
 }

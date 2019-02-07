@@ -63,11 +63,7 @@ public class OrganicPet extends VirtualPet {
 	public void energizePet() {
 		sleepy = 0;
 	}
-	public void status() {
-		System.out.println( name + type + age + hunger + energy + sleepy );
-			
-		
-	}
+	
 	public int getStatus() {
 		return getStatus();
 

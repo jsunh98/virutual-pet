@@ -5,8 +5,8 @@ import orgRobClass.RoboticPet;
 
 public class RoboticFish extends RoboticPet implements Swims {
 
-	public RoboticFish(String name, String type, int age) {
-		super(name, type, age);
+	public RoboticFish(String name, String type, String species) {
+		super(name, type, species);
 	}
 
 	public void swim() {
@@ -15,7 +15,7 @@ public class RoboticFish extends RoboticPet implements Swims {
 	
 	public void stats () {
 		super.stats();
-		System.out.println("your fishy can swim");
+		System.out.println("Your fishy can swim, and it shits out flash drives filled with Bitcoins");
 	}
 	
 }

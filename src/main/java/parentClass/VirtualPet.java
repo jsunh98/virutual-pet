@@ -1,18 +1,21 @@
 package parentClass;
 
-import orgRobClass.OrganicPet;
+import java.util.ArrayList;
+import java.util.List;
+
 import parentClass.VirtualPet;
 
 public abstract class VirtualPet {
 
 	// these are instances -- these are the problems the pet faces (properties)
-	private String name, type;
-	private int age;
+	private String name, type, species;
 	
-	public VirtualPet(String name, String type, int age) { // name and type constructor
+	
+	
+	public VirtualPet(String name, String type, String species) { // name and type constructor
 		this.name = name;
 		this.type = type;
-		this.age = 0;
+		this.species = species;
 
 	}
 
@@ -25,32 +28,44 @@ public abstract class VirtualPet {
 
 	}
 
-	public int getAge() {
-		return age;
+	public String getSpecies() {
+		
+		return species;
 	}
 
-	public void tick() { // Start of the methods dictate how users interact.
-		age += 1;
+	
 
-	}
+	
 	public void play() {
 		
 	}
 	public void stats () {
-		System.out.println("Here is a list of your stats: " +  "\n" + name +"\n" + type +"\n" + age);
+	
+		System.out.println("Here is a list of your stats: " +  "\n Pet Name: " + name +"\n Pet Type: " + type + "\n Pet Species: " + species);
 	
 	}
 	
-	public static String getSpecies() {
+	public void energizePet() {
 		
-		return null;
 	}
-	public abstract void energizePet ();
 
 	@Override
 	public String toString() {
-		return "\nPet [name=" + name + ", type=" + type + ", age=" + age + "]";
+	
+		
+		 return("[Pet Type: " + type + "\n Pet Species: " + species +"]\n");
+
+		
+		
 	}
+
+	public void tick() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	
 
 	
 }

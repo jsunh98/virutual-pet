@@ -5,8 +5,8 @@ import orgRobClass.OrganicPet;
 
 public class OrganicFish extends OrganicPet implements Swims {
 
-	public OrganicFish(String name, String type, int age) {
-		super(name, type, age);
+	public OrganicFish(String name, String type, String species) {
+		super(name, type, species);
 
 	}
 
@@ -15,16 +15,16 @@ public class OrganicFish extends OrganicPet implements Swims {
 		
 	}
 	public void layEggs() {
-		System.out.println("laid eggs...");
+		System.out.println("shit eggs...");
 	}
 	public void stats () {
 		super.stats();
-		System.out.println("your animal can swim and lay eggs");
+		System.out.println("Your animal can swim, and it shits golden eggs");
 	}
 
-	@Override
-	public void energizePet() {
-
-	}
+//	@Override
+//	public void energizePet() {
+//
+//	}
 
 }

@@ -10,24 +10,17 @@ public class VirtualPetTest {
 
 	@Test
 	public void shouldBeAbleToCreatePet() {
-		VirtualPet petType = new OrganicPet("Oprah", "organic", 0);
+		VirtualPet petType = new OrganicPet("Oprah", "organic", "");
 	}
 
 	@Test
 	public void petShouldHaveName() {
-		VirtualPet underTest = new OrganicPet("Jeff","", 0);
+		VirtualPet underTest = new OrganicPet("Jeff","", "");
 		String expected = underTest.getName();
 		assertEquals(expected, "Jeff");
 	}
 
-	@Test
-	public void shouldTick() {
-		VirtualPet underTest = new OrganicPet("Jeff","", 0);
-		int initialPetAge = ((OrganicPet)underTest).getAge();
-		((OrganicPet)underTest).tick();
-		int petAgeAfterTick = ((OrganicPet)underTest).getAge();
-		assertEquals(initialPetAge + 1, petAgeAfterTick);
-	}
+	
 	
 	
 }

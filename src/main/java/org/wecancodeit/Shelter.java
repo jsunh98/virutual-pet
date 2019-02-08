@@ -1,16 +1,14 @@
 package org.wecancodeit;
 
 import java.util.HashMap;
-import java.util.Map;
-
 import orgRobClass.OrganicPet;
 import orgRobClass.RoboticPet;
 import parentClass.VirtualPet;
 
 public class Shelter {
 
-	VirtualPet myRobotPet = new RoboticPet("", "", 0);
-	VirtualPet myOrganicPet = new OrganicPet("", "", 0);
+	VirtualPet myRobotPet = new RoboticPet("", "", "");
+	VirtualPet myOrganicPet = new OrganicPet("", "", "");
 
 	private HashMap<String, VirtualPet> pets;
 
@@ -47,7 +45,7 @@ public class Shelter {
 		for (VirtualPet singlePet : pets.values()) {
 
 			// For each single pet in pet collection lets do something to it.
-			singlePet.tick();
+			((VirtualPet) singlePet).tick();
 
 		}
 	}
@@ -104,7 +102,7 @@ public class Shelter {
 	public void chargeAllPets() {
 		for (VirtualPet pet : getAllPets().values()) { // we named pet here, call on
 			if (pet instanceof RoboticPet) {
-				((RoboticPet) pet).chargeBattery();// pets.values to see all
+				((RoboticPet) pet).chargeBattery(false);// pets.values to see all
 			}
 			// values, and getFed to feed
 			// all in hashmap

@@ -5,19 +5,20 @@ import parentClass.VirtualPet;
 public class RoboticPet extends VirtualPet {
 
 	private int batteryLevel;
+	private Boolean chargeBattery;
 	private int oilLevel;
 	private Boolean oilChange;
 
 //	VirtualPet pet = new RoboticPet("Oprah", "robotic", 0);
 
-	public RoboticPet(String name, String type, int age) { // Calling common properties
+	public RoboticPet(String name, String type, String species) { // Calling common properties
 		// shared by all = Virtual Pet
-		super(name, type, age);
+		super(name, type, species);
 		
 		this.oilLevel = 100;
 		this.oilChange(false);
-		this.batteryLevel = 0;
-		
+		this.batteryLevel = 100;
+		this.chargeBattery(false);
 		
 	}
 
@@ -28,14 +29,17 @@ public class RoboticPet extends VirtualPet {
 	public Boolean getOilChange() {
 		return oilChange;
 	}
-
+	
 
 	public int getBatteryLevel() {
 		return batteryLevel;
 	}
 	
-	public void chargeBattery() {
-		batteryLevel += 100;
+	public Boolean getChargeBattery() {
+		return chargeBattery;
+	}
+	public void chargeBattery(boolean b) {
+		batteryLevel = 100;
 	}
 
 	public void oilChange(boolean b) {
@@ -45,15 +49,18 @@ public class RoboticPet extends VirtualPet {
 	@Override
 	public void energizePet() {
 		this.batteryLevel = 100;
+		this.oilLevel = 100;
 	}
 
 	public void play() {
 		batteryLevel -= 25;
+		oilLevel -=25;
 
 	}
 	public void stats() {
 		super.stats();
-		System.out.println(this.batteryLevel);
+		System.out.println(" Battery Level: " + this.batteryLevel + "%\n Oil Level: " + this.oilLevel +"%");
+		
 		
 	}
 	
@@ -61,7 +68,7 @@ public class RoboticPet extends VirtualPet {
 	public void tick() {
 		oilLevel -= 10;
 		batteryLevel -= 15;
-		super.tick();
+		
 	}
 
 

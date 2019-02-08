@@ -10,9 +10,9 @@ public class OrganicPet extends VirtualPet {
 
 //	VirtualPet pet = new OrganicPet("Oprah", "organic", 0);
 
-	public OrganicPet(String name, String type, int age) { // Calling common properties
+	public OrganicPet(String name, String type, String species) { // Calling common properties
 		// shared by all = Virtual Pet
-		super(name, type, age);
+		super(name, type, species);
 
 		this.hunger = 20;
 		this.sleepy = 20;
@@ -43,11 +43,11 @@ public class OrganicPet extends VirtualPet {
 	public void play() {
 		energy -= 20;
 		sleepy += 10;
-		hunger += 30;
+		hunger += 10;
 	}
 
 	public void sleep() {
-		energy = 100;
+		energy = 20;
 		sleepy = 0;
 		hunger += 5;
 
@@ -57,15 +57,24 @@ public class OrganicPet extends VirtualPet {
 		energy = energy - 5;
 		sleepy = sleepy + 5;
 		hunger = hunger + 10;
-		super.tick();
-	}
-	@Override
-	public void energizePet() {
-		sleepy = 0;
+
 	}
 	
+	public void stats() {
+		super.stats();
+		System.out.println(" Energy Level: " + this.energy + "%\n Sleepiness Level: " + this.sleepy + "%\n Hunger Level: " + hunger + "%");
+		
+		
+	}
+
+	@Override
+	public void energizePet() {
+		this.sleepy = 0;
+	}
+
 	public int getStatus() {
 		return getStatus();
 
-}
+	}
+	
 }
